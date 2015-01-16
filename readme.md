@@ -12,7 +12,7 @@
 
 ```
 
-2.运行```composer install``` 安装本组件
+2.运行```composer update``` 安装本组件
 
 3.在```app/config/app.php```中加入以下配置
 
@@ -34,7 +34,7 @@
 
 4.运行下面这条命令
 
-```php artisan config:publish hardy/yimei```
+```php artisan config:publish hardywen/yimei```
 
 5.运行上面命令后，可以在 ```app/config/packages/hardywen/yimei/config```里配置支付宝的相关参数 
 

@@ -18,7 +18,7 @@ class YimeiServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('hardy/yimei');
+		$this->package('hardywen/yimei');
 	}
 
 
