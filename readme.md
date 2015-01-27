@@ -43,6 +43,6 @@
 
 6.发送短信
 ```php
-$content = Yimei::getContent();
+$content = Yimei::getContent(); //可以传入 code 参数。将通过config里面的内容模板渲染出来。不传code参数则会自动生成6位随机数字
 $msg = Yimei::sendSMS(['138xxxxxxxx','138xxxxxxxx'], $content);
 ```
