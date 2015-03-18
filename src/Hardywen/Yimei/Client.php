@@ -105,6 +105,11 @@ class Client{
 
 	}
 
+	function newInstance($config){
+
+		return \Hardywen\Yimei\Yimei::newInstance($config);
+	}
+
 	/**
 	 * 设置发送内容 的字符编码
 	 * @param string $outgoingEncoding 发送内容字符集编码
@@ -354,6 +359,15 @@ class Client{
 		return $result;
 	}
 
+
+	/**
+	 * 查询剩余短信条数
+	 * @return int 短信条数
+	 */
+	function getMsgStock()
+	{
+		return $this->getBalance() / $this->getEachFee();
+	}
 
 	/**
 	 * 得到上行短信  (注:此方法必须为已登录状态下方可操作)
