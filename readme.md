@@ -46,3 +46,14 @@
 $content = Yimei::getContent(); //可以传入 code 参数。将通过config里面的内容模板渲染出来。不传code参数则会自动生成6位随机数字
 $msg = Yimei::sendSMS(['138xxxxxxxx','138xxxxxxxx'], $content);
 ```
+
+7.新实例
+第6点的使用是使用config.php的配置去发送的。如果想实时更新配置，重新生成一个新实例，则用以下方法：
+```php
+	$config = [];//配置项，没有配置的会使用config.php中的配置。
+	$yimei = Yimei::newInstance($config);
+	$content = $yimei->getContent();
+	$yimei->sendSMS([],$content);
+```
+
+8.新增方法，除了官方demo里的方法之外，多增加了一个获取剩余短信条数的方法 getMsgStock(); 就是整合一个原有的getBalance()和getEachFee()而已
