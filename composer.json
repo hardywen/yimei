@@ -1,17 +1,17 @@
 {
     "name": "hardywen/yimei",
     "description": "亿美短信",
-    "keywords": ["Yimei","laravel","php","Mobile messge"],
+    "keywords": ["Yimei","laravel","php","Mobile message"],
     "license": "MIT",
     "authors": [
         {
             "name": "HardyWen",
-            "email": "hardywen@foxmail.com"
+            "email": "hardy.wen@foxmail.com"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "php": ">=5.5.9",
+        "laravel/framework": "5.1.*"
     },
     "autoload": {
         "psr-0": {
