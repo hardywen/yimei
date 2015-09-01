@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class YimeiFacade extends Facade {
+class Yimei extends Facade {
 
 	protected static function getFacadeAccessor() {
 		return 'yimei';

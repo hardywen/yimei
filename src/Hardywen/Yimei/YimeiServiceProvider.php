@@ -2,6 +2,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
+require_once(__DIR__ . '/Client.php');
+
 class YimeiServiceProvider extends ServiceProvider
 {
 
@@ -33,7 +35,24 @@ class YimeiServiceProvider extends ServiceProvider
     {
         $app = $this->app;
         $app['yimei'] = $app->share(function ($app) {
-            return Yimei::instance($app['config']['yimei']);
+
+            $config = $app['config']['yimei'];
+
+            $url = $config ['url'];
+            $serialNumber = $config ['serialNumber'];
+            $password = $config ['password'];
+            $sessionKey = $config ['sessionKey'];
+            $contentTpl = $config ['contentTpl'];
+            $proxyhost = false;
+            $proxyport = false;
+            $proxyusername = false;
+            $proxypassword = false;
+            $timeout = 2;
+            $response_timeout = 10;
+
+            return new \Client($url, $serialNumber, $password, $sessionKey, $proxyhost, $proxyport,
+                $proxyusername, $proxypassword, $timeout, $response_timeout, $contentTpl);
+
         });
     }
 
