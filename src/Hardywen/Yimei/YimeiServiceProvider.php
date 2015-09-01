@@ -19,7 +19,7 @@ class YimeiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $source = realpath(__DIR__ . '/../../config/config.php');
+        $source = realpath(__DIR__ . '/../../config/yimei.php');
         $this->publishes([$source => config_path('yimei.php')]);
     }
 
